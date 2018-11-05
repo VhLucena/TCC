@@ -1,3 +1,21 @@
 \section{AdaBoost}
 
+O modelo \textit{boosting} refere-se a um método \textit{ensemble} (sessão \ref{sec:ensemble}) para resolver problemas de classificação e regressão. A ideia geral do \textit{boosting} é  combinar vários meta-algoritmos fracos em um modelo robusto. Esses meta-algoritmos são treinados em sequência, onde cada um tenta corrigir seu antecessor \cite{Kearns:1988}.
+
+O algoritmo do tipo \textit{boosting} mais conhecido na literatura é o \textit{Adaptive Boosting} ou simplesmente \textit{AdaBoost}, que foi proposto por \cite{Freund:1997}. O algoritmo pode ser usado para melhorar o desempenho de qualquer algoritmo de \textit{machine learning}. Contudo, AdaBoost funciona melhor com preditores fracos \footnote{Preditores fracos são aqueles que alcançam uma acurácia pouco acima de um preditor aleatório.}.
+
+O preditor mais comum para ser usado com o AdaBoost são as árvores de decisão com um nível. Pelo fato dessas árvores possuírem apenas um nível, são conhecidas na literatura como \textit{Decision Stump} (algo como Toco de Decisão, em vez de Árvore de Decisão).
+
 \subsection{Funcionamento}
+O trabalho de \cite{Freund:1999} foi utilizado como referência para a explicação do funcionamento do algoritmo que será dada a seguir.
+
+Inicialmente, é fornecido como entrada para o algoritmo, o conjunto de treino $(x_1, y_1), (x_2, y_2) ..., (x_m, y_m)$, onde cada $x_i$ pertence ao conjunto de instâncias $X$, e cada $y_i$ pertence ao conjunto de rótulos $Y$. Para problemas envolvendo a classificação binária (ou dicotômica), considera-se $Y = \{-1, +1\}$. 
+
+Adaboost utiliza $T$ preditores, os autores chamam os preditores de \textit{hipóteses}, denotando as hipóteses como sendo $h_1(x), h_2(x),..., h_T(x)$, onde $x$ representa uma instância a ser classificada pela hipótese (preditor) $h_t(x)$.
+
+Uma das principais ideias do algoritmo é manter uma distribuição ou conjunto de
+pesos sobre o conjunto de treinamento. Isto é, cada instância no conjunto de treinamento existe um peso associado e, a medida que o algoritmo evolui, quanto mais difícil for para classificar uma instância de treinamento, maior será o peso atribuído a ela. De modo que, para os preditores subsequentes, a chance de classificar corretamente esse dado é maior. O peso dessa distribuição para um dado de treinamento $i$ na rodada $t$ é denotado por $D_t(i)$.
+
+Inicialmente, todas as instâncias no conjunto de treinamento possuem exatamente o mesmo peso $w_i = \dfrac{1}{N}$, onde $N$ é o tamanho do conjunto de treinamento. Mas, a cada rodada, o peso das amostras classificadas erroneamente são aumentados, dessa forma, os preditores são forçados a focar nas amostras mais difíceis de serem classificadas.
+
+
