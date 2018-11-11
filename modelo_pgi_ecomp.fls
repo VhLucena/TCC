@@ -1,0 +1,8 @@
+PWD /Users/viniciuslucena/GoogleDrive/0s Projetos/TCC/Modelo Latex PG - C3FURG
+INPUT /usr/local/texlive/2018/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/viniciuslucena/GoogleDrive/0s Projetos/TCC/Modelo Latex PG - C3FURG/modelo_pgi_ecomp.tex
+OUTPUT modelo_pgi_ecomp.log
+INPUT C3FURG.cls
+INPUT C3FURG.cls
