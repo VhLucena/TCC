@@ -1,7 +1,24 @@
 \chapter{Metodologia}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit malesuada laoreet. In hac habitasse platea dictumst. Vestibulum et erat elit. Quisque tempor dui id est lacinia, ut gravida nulla lacinia. Ut egestas varius nibh, ac ullamcorper nunc malesuada sit amet. Suspendisse fermentum condimentum elit, a fringilla leo molestie vel. Aenean ac quam sodales est tincidunt commodo at sit amet eros. Quisque in congue ligula, vel posuere purus. Vivamus sit amet ultricies elit.
+Este capítulo descreve a metodologia utilizada no desenvolvimento desta monografia. O capítulo inicia-se com a descrição dos dados (Seção \ref{sec:dados}). Após, é relatado a parametrização dos algoritmos empregados (Seção \ref{sec:parametrizacao}). Por fim, as métricas de avaliação dos algoritmos são apresentadas (Seção \ref{sec:metricas_avaliacao}).
 
-Curabitur pellentesque volutpat ornare. Pellentesque pulvinar tincidunt ligula, vel lacinia augue iaculis consequat. Suspendisse sollicitudin tristique dictum. Cras vestibulum, felis consectetur euismod elementum, quam purus pellentesque diam, at convallis dui lectus imperdiet eros. Donec vitae turpis lacinia, auctor ligula id, tincidunt arcu. Nunc non rutrum nunc. Nam ornare est vitae elementum dignissim. Curabitur posuere arcu purus, vitae efficitur nibh bibendum ac. Maecenas convallis justo sit amet ullamcorper pellentesque. Cras non ante eleifend, consectetur risus lobortis, porta est. Morbi ac justo id erat placerat convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque et dolor scelerisque, lacinia ligula at, imperdiet purus.
+\section{Os dados}
+\label{sec:dados}
+Esta monografia foi concebida em parceria com o Hospital das Clínicas de Porto Alegre (HCPA), da Universidade Federal do Rio Grande do Sul (UFRGS). Os dados utilizados são de dependentes químicos internados de forma voluntária na Unidade de Internação para Tratamento de Alcoolismo e Dependência Química do HCPA. 
 
-Pellentesque vitae elit quis nulla lobortis eleifend ut quis felis. Donec nec feugiat turpis. Donec tincidunt id felis nec mattis. Donec vitae convallis libero. Praesent auctor nibh tortor, et egestas turpis ultricies id. Nunc nibh ipsum, iaculis a neque vitae, mollis congue nisi. Nulla facilisi. Vivamus massa nulla, lacinia sed nisl sit amet, varius convallis dui. In aliquam ut arcu non commodo.
+\section{Parametrização dos algoritmos}
+\label{sec:parametrizacao}
+Quando se trata de uma pesquisa científica, é importante garantir a repetibilidade e reprodutibilidade dos experimentos. A tabela \hl{Tabela} mostra as configurações dos algoritmos utilizados. Tais algoritmos já foram discutidos em detalhes no capítulo \ref{cap:fundamentacao}.
+
+\section{Avaliação dos Resultados}
+\label{sec:metricas_avaliacao}
+Uma etapa importante em qualquer tarefa de mineração de dados é avaliar os modelos aprendidos. As métricas de avaliação servem para o pesquisador tenha subsídios de escolher qual o melhor modelo para o problema em questão. Para o atual trabalho, as métricas de avaliação utilizadas foram:
+\begin{itemize}
+  \item Acurácia (ACC)
+  \item Precisão (PRE)
+  \item Revocação (REV)
+  \item F1-Score (F1)
+  \item Área abaixo da Curva ROC (AUC)
+\end{itemize}
+
+Essas métricas foram escolhidas por serem as mais comuns quando se trata de problemas de classificação. No entanto, a melhor métrica dependerá do domínio do problema.
