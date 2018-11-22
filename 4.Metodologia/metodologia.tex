@@ -8,7 +8,29 @@ Esta monografia foi concebida em parceria com o Hospital das Clínicas de Porto 
 
 \section{Parametrização dos algoritmos}
 \label{sec:parametrizacao}
-Quando se trata de uma pesquisa científica, é importante garantir a repetibilidade e reprodutibilidade dos experimentos. A tabela \hl{Tabela} mostra as configurações dos algoritmos utilizados. Tais algoritmos já foram discutidos em detalhes no capítulo \ref{cap:fundamentacao}.
+Quando se trata de uma pesquisa científica, é importante garantir a repetibilidade e reprodutibilidade dos experimentos. A tabela \ref{tab:parametros-algoritmos} mostra as configurações dos algoritmos utilizados. Tais algoritmos já foram discutidos em detalhes no capítulo \ref{cap:fundamentacao}.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ c l } 
+\hline
+\textbf{Algoritmo} & \textbf{Parâmetros} \\
+\hline
+
+\multirow{3}{8em}{Random Forest} & n\_estimators = 10000 \\  & random\_state = 123 \\ & criterion = entropy \\ & max\_depth = None \\
+\hline
+
+\multirow{3}{8em}{AdaBoost} & base\_estimator = None \\  & n\_estimators = 50 \\ & learning\_rate = 1 \\ & random\_state = 123 \\
+\hline
+
+\multirow{3}{8em}{SVM} & C = 1 \\  & kernel = linear \\ & random\_state = 123 \\
+\hline
+
+\end{tabular}
+\caption{Configuração dos algoritmos de classificação.}
+\label{tab:parametros-algoritmos}
+\end{table}
+
 
 \section{Avaliação dos Resultados}
 \label{sec:metricas_avaliacao}

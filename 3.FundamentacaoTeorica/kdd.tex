@@ -1,8 +1,8 @@
 \section{Descoberta de Conhecimento}
-A primeira vez que apareceu o termo \textit{Descoberta de Conhecimento em Banco de Dados} (do inglês \textit{Knowledge Discovery in Database}) foi em 1989, por Piatetsky-Shapiro, com o objetivo de enfatizar que o produto final do processo é o conhecimento.
+A primeira vez que apareceu o termo \textit{Descoberta de Conhecimento em Banco de Dados} (do inglês \textit{Knowledge Discovery in Databases}) foi em 1989, por Piatetsky-Shapiro, com o objetivo de enfatizar que o produto final do processo é o conhecimento.
 
 Para \cite{fayyad:1996} KDD refere-se ao processo geral de descobrir conhecimento útil a partir dos dados, essa extração de conhecimento é um processo não-trivial. 
-A Figura ~\ref{fig:kdd} mostra o processo de KDD proposto por Fayyad et al. 
+A Figura ~\ref{fig:kdd} mostra o processo de KDD proposto por \citeauthor{fayyad:1996}. 
 O termo processo implica que o KDD é composto por várias etapas, as quase são iterativas e interativas. 
 Iterativa reflete o ciclo entre as etapas e, interativa reflete o caráter interdisciplinar do processo, uma vez que o KDD se aplica em inúmeras áreas e para resolver o problema muitas vezes é necessária a ajuda de um \textit{expert} naquela área.
 
@@ -33,7 +33,7 @@ A seguir, será dada uma visão geral de cada uma das fases.
 \textbf{3) Transformação}: Uma vez que os dados estão limpos e tratados, é necessário armazená-los e formatá-los adequadamente para que os algoritmos de aprendizado possam ser utilizados. A título de exemplo, se for usar um algoritmo de agrupamento baseado na distância euclidiana, é necessário converter todos os dados para numérico.
 
 % --- MINERAÇÃO DE DADOS -- %
-\textbf{4) Mineração de Dados}:  Embora todas as etapas sejam importantes, a etapa de Mineração de Dados é a que recebe maior atenção. Conforme \cite{fayyad:1996}, mineração de dados é a aplicação de algoritmos específicos para extrair padrões a partir dos dados. Ainda de acordo com Fayyad et al, os algoritmos de mineração de dados podem ser dividimos em cinco categorias: Associação, Classificação, Regressão, Segmentação e Sumarização. A tarefa na qual este projeto se encontra é a de classificação. 
+\textbf{4) Mineração de Dados}:  Embora todas as etapas sejam importantes, a etapa de Mineração de Dados é a que recebe maior atenção. Conforme \cite{fayyad:1996}, mineração de dados é a aplicação de algoritmos específicos para extrair padrões a partir dos dados. De acordo com \citeauthor{fayyad:1996}, os algoritmos de mineração de dados podem ser dividimos em cinco categorias: Associação, Classificação, Regressão, Segmentação e Sumarização. A tarefa na qual este projeto se encontra é a de classificação. 
 
 A tarefa de classificação é responsável por identificar a qual classe um determinado registro pertence. Inicialmente, o modelo é ``alimentado'' com conjunto de registros já rotulados, isto é, é fornecida a qual classe os registros pertencem. Com esses dados, o algoritmo treina a aprende padrões que fazem com que um registro pertença a uma classe ou a outra
 (esse tipo de aprendizado é conhecido como aprendizado supervisionado).

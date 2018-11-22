@@ -16,7 +16,7 @@ Adaboost utiliza $T$ preditores, os autores chamam os preditores de \textit{hip�
 Uma das principais ideias do algoritmo é manter um conjunto de
 pesos sobre o conjunto de treinamento. Isto é, para cada instância no conjunto de treinamento há um peso associado e, a medida que o algoritmo evolui, quanto mais difícil for para classificar uma instância de treinamento, maior será o peso atribuído a ela. De modo que, para os preditores subsequentes, a chance de classificar corretamente esse dado é maior. O peso dessa distribuição para um dado de treinamento $i$ na rodada $t$ é denotado por $D_t(i)$.
 
-Inicialmente, todas as instâncias no conjunto de treinamento possuem exatamente o mesmo peso $w_i = \dfrac{1}{N}$, onde $N$ é o tamanho do conjunto de treinamento. Mas, a cada rodada, o peso das amostras classificadas erroneamente são aumentados, dessa forma, os preditores são forçados a focar nas amostras mais difíceis de serem classificadas.
+Inicialmente, todas as instâncias no conjunto de treinamento possuem exatamente o mesmo peso $w_i = \dfrac{1}{N}$, onde $N$ é o tamanho do conjunto de treinamento. Mas, a cada rodada, o peso das amostras classificadas erroneamente são aumentados, dessa forma, os preditores são forçados a focar nas amostras mais difíceis de serem classificadas. A cada rodada $t$ o peso de cada amostra é normalizado de acordo com o somatório de pesos de todas as amostras $Z_t = \sum_{i=1}^{N} D_t(i)$
 
 
 %\begin{document}
@@ -29,7 +29,7 @@ Inicialmente, todas as instâncias no conjunto de treinamento possuem exatamente
    Inicialize $D_1(i) = \frac{1}{N}$.   
    
     \Para{cada $t = 1,...,T$}{
-        Treine os preditores usando a distribuição $D_t$ \\
+        Treine o preditor usando a distribuição $D_t$ \\
         Calcule a taxa de erro $\epsilon_t$ \\
         Calcule o peso do preditor $ \alpha_t = \frac{1}{2} \times \frac{1-\epsilon_t}{\epsilon_t}$ \\
         Atualize os pesos dos dados $D_{t+1}(i) = \frac{D_t(i)}{Z_t} \times
@@ -41,10 +41,20 @@ Inicialmente, todas as instâncias no conjunto de treinamento possuem exatamente
     }
    
    \Retorna{$sign \begin{pmatrix} \sum_{t=1}^{T} \alpha_t h_t(x) \end{pmatrix}$}
-   \label{alg1}
+   \label{alg:adaboost}
    \caption{\textsc{AdaBoost}}
  \end{algorithm}
 %\end{document}
+
+\begin{figure}[ht!] 
+    \centering
+    \includegraphics[scale=0.15]{Imagens/Model-Adaboost.png}
+    \caption{Funcionamento do algoritmo AdaBoost}
+    \label{fig:adaboost}
+\end{figure}
+
+A figura \ref{fig:adaboost} ilustra o funcionamento do algoritmo AdaBoost, percebe-se que há um encadeamento entre os preditores, além disso, percebe-se que cada preditor influencia no \textit{dataset} que será utilizado no preditor subsequente.
+
 
 
 \subsection{Vantagens e Desvantagens}
